@@ -72,7 +72,7 @@ for n=1:(length(t)-1)
     v(:,length(y),n+1) = 2.5*v(:,nj-1,n+1) - 2*v(:,nj-2,n+1) + 0.5*v(:,nj-3,n+1);     
 end
 
-%obj = VideoWriter('animation.avi');
+%obj = VideoWriter('tsunami.avi');
 %obj.Quality = 100;
 %obj.FrameRate = 40;
 %open(obj);
