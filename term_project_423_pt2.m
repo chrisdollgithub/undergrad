@@ -1,6 +1,4 @@
 function term_project_423_pt2
-%Chris Doll
-%AERSP 423
 clear all
 clc;
 close all
@@ -74,10 +72,10 @@ for n=1:(length(t)-1)
     v(:,length(y),n+1) = 2.5*v(:,nj-1,n+1) - 2*v(:,nj-2,n+1) + 0.5*v(:,nj-3,n+1);     
 end
 
-obj = VideoWriter('animation.avi');
-obj.Quality = 100;
-obj.FrameRate = 40;
-open(obj);
+%obj = VideoWriter('animation.avi');
+%obj.Quality = 100;
+%obj.FrameRate = 40;
+%open(obj);
 
 %Tsunami Propagation (2D Lax's Method)
 for index=1:length(t)
@@ -88,10 +86,10 @@ for index=1:length(t)
     xlabel('X [m]')
     ylabel('Y [m]')
     zlabel('Height [m]')
-    f = getframe(gcf)
-    writeVideo(obj,f)
+%    f = getframe(gcf)
+%    writeVideo(obj,f)
 
-  %  pause(.0001)
+    pause(.0001)
 end
-obj.close();
+%obj.close();
 end
